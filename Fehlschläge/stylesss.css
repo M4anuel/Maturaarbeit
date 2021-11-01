@@ -1,0 +1,412 @@
+html {
+  font-size: 100%;
+  background-color: #fffdf5;
+}
+a {
+  text-decoration: none;
+  color: #9e451f;
+  white-space: nowrap;
+}
+a:hover {
+  white-space: nowrap;
+  text-decoration: none;
+  color: #e75e38;
+}
+/*Dropdown menus*/
+.dropbtn {
+  border: none;
+  background-color: #fff0da;
+  color: #9e451f;
+  padding: 0;
+}
+.dropdown,
+.dropdown1 {
+  display: inline-block;
+  position: relative;
+}
+.dropcontent {
+  padding: 0.9vw 1vw;
+  display: none;
+  position: absolute;
+  z-index: 1;
+  background-color: #fff0da;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+.dropdown:hover .dropcontent,
+.dropdown1:hover .dropcontent {
+  display: block;
+}
+/*Dropdown menus end*/
+@media screen and (min-width: 1200px)/*individual sites*/{
+  .mainimgclass {
+    grid-area: i0;
+    justify-content: center;
+  }
+  .mainimg {
+    width: 60vw;
+    grid-area: i0;
+  }
+  .content1{
+    grid-column: 1 / span 2;
+    grid-row: 2; 
+    display:grid;
+    width:fit-content;
+    grid-template-areas:
+    "i1 t0"
+    "t2 i2";
+    justify-items: center;
+    gap: 0 2vw;
+  }
+  .i1{
+    margin-top:1.5vh;
+    width: 35vw;
+  }
+  .content2{
+    display:grid;
+    width:fit-content;
+    grid-template-areas:
+    "i3 t3";
+    justify-items: center;
+    gap: 0 2vw;
+  }
+  .pferdebilderi0{
+    grid-area: i3;
+  }
+  .pferdebildert0{
+    grid-area:t3;
+  }
+}
+@media screen and (min-width: 1200px)/*template site desktop*/{
+  .site{
+    width: 70vw;
+    margin: 3rem auto;
+    border: 1px solid #7f7f7f;
+    border-radius: 4px;
+    padding: 20px;
+    overflow: auto;
+    display: grid;
+    grid-template-areas:
+      " menu menu"
+      " i0 i0"
+      " footer0  footer2 ";
+    gap: 2rem;
+    justify-items: center;
+    position: relative;
+  }
+  .menu {
+    width: 97%;
+    grid-area: menu;
+    font-size: 1.4vw;
+    color: #5b3817;
+    font-family: Palatino, Palatino Linotype, Georgia, Times, Times New Roman,
+      serif;
+    background-color: #fff0da;
+    padding: 0.5vw 1vw 0.5vw 0.5vw;
+    display: grid;
+    grid-template-columns: 10px repeat(5);
+    grid-template-rows: repeat(2);
+    grid-template-areas:
+      "logo name . . . . ."
+      "logo drop1 landschaft drop2  ausstellungen biographie kontakt";
+    justify-items: left;
+    align-items: center;
+    gap: 0 2rem;
+    overflow: visible;
+  }
+  .logo {
+    height: 4vw;
+  }
+  .name {
+    font-size: 1.8vw;
+  }
+  .copyright {
+    margin-left: 0;
+    margin-right: auto;
+    font-family: Baskerville, Georgia, Cambria, Times, Times New Roman, serif;
+    font-size: 1.2vw;
+    color: #896f58;
+    grid-area: footer0;
+  }
+  .haftungsausschluss {
+    margin-left: auto;
+    margin-right: 0;
+    font-family: Baskerville, Georgia, Cambria, Times, Times New Roman, serif;
+    font-size: 1.2vw;
+    color: #896f58;
+    grid-area: footer2;
+  }
+}
+@media screen and (max-width: 1200px)/*individual sites*/{
+  .mainimgclass {
+    grid-area: i0;
+    justify-content: center;
+  }
+  .mainimg {
+    width: 90vw;
+  }
+}
+@media screen and (max-width: 1200px)/*template site vertical monitor*/{
+  .site {
+    width: 80vw;
+    margin: 1rem auto;
+    border: 1px solid #7f7f7f;
+    border-radius: 4px;
+    padding: 20px;
+    overflow: hidden;
+    width: fit-content;
+    display: grid;
+    grid-template-areas:
+      " menu menu"
+      " i0 i0"
+      " footer0  footer2 ";
+    gap: 2rem;
+    justify-items: center;
+    position: relative;
+  }
+  .menu {
+    width: 90vw;
+    grid-area: menu;
+    font-size: 2.5vw;
+    color: #5b3817;
+    font-family: Palatino, Palatino Linotype, Georgia, Times, Times New Roman,
+      serif;
+    background-color: #fff0da;
+    padding: 1vw;
+    display: grid;
+    grid-template-areas:
+      "logo name . . "
+      "logo ausstellungen biographie kontakt"
+      "logo drop1 landschaft drop2";
+    justify-content: fit-content;
+    align-items: center;
+    overflow: visible;
+    gap: 0.7vw 0;
+  }
+  .logo {
+    grid-area: logo;
+    height: 8vw;
+    justify-items: right;
+  }
+  .name {
+    font-size: 3vw;
+  }
+  .copyright {
+    margin-left: 0;
+    margin-right: auto;
+    font-family: Baskerville, Georgia, Cambria, Times, Times New Roman, serif;
+    font-size: 1.4vw;
+    color: #896f58;
+    grid-area: footer0;
+  }
+  .haftungsausschluss {
+    margin-left: auto;
+    margin-right: 0;
+    font-family: Baskerville, Georgia, Cambria, Times, Times New Roman, serif;
+    font-size: 1.4vw;
+    color: #896f58;
+    grid-area: footer2;
+  }
+}
+@media screen and (max-width: 1024px)/*individual sites*/{
+  .mainimgclass {
+    grid-area: i0;
+    justify-content: center;
+  }
+  .mainimg {
+    width: 100%;
+  }
+  .content1{
+    grid-area: i0;
+    display:grid;
+    width:fit-content;
+    grid-template-areas:
+    "i1 "
+    "t0"
+    "t2 "
+    "i2";
+    justify-items: center;
+    gap: 0 2vw;
+    overflow: auto;
+  }
+}
+@media screen and (max-width: 1024px)/*template site tablet*/{
+  .site {
+    margin: 0;
+    height: 95vh;
+    padding: 2vw;
+    border: 0;
+    overflow: hidden;
+    display: grid;
+    grid-template-areas:
+      " menu menu"
+      " i0 i0"
+      " footer0  footer2 ";
+    gap: 2rem;
+    justify-items: center;
+    position: relative;
+  }
+  
+  .menu {
+    z-index: 99999999;
+    width: 96%;
+    height: 23vh;
+    min-height: 30vw;
+    grid-area: menu;
+    font-size: 5vw;
+    color: #5b3817;
+    font-family: Palatino, Palatino Linotype, Georgia, Times, Times New Roman,
+      serif;
+    background-color: #fff0da;
+    padding: 2vw;
+    display: grid;
+    grid-template-areas:
+      "logo name"
+      "ausstellungen biographie "
+      "kontakt landschaft"
+      "drop1  drop2";
+    align-items: center;
+    justify-items: left;
+    overflow: visible;
+    gap: 0.7vw 0;
+  }
+  .logo {
+    grid-area: logo;
+    height: 12vw;
+    margin-right: 5vw;
+    justify-self: right;
+  }
+  .name {
+    font-size: 9vw;
+  }
+  .copyright {
+    margin-left: 0;
+    margin-right: auto;
+    font-family: Baskerville, Georgia, Cambria, Times, Times New Roman, serif;
+    font-size: 3.3vw;
+    color: #896f58;
+    grid-area: footer0;
+    align-self: flex-end;
+  }
+  .haftungsausschluss {
+    margin-left: auto;
+    margin-right: 0;
+    font-family: Baskerville, Georgia, Cambria, Times, Times New Roman, serif;
+    font-size: 3.3vw;
+    color: #896f58;
+    grid-area: footer2;
+    align-self: flex-end;
+  }
+}
+@media screen and (max-width: 500px)/*individual sites*/{
+  .mainimgclass {
+    grid-area: i0;
+    justify-content: center;
+  }
+  .mainimg {
+    width: 100%;
+  }
+  .content1{
+    grid-area: i0;
+    display:grid;
+    width:fit-content;
+    grid-template-areas:
+    "i1"
+    "t0"
+    "t2"
+    "i2";
+    justify-items: center;
+    gap: 0 2vw;
+  }
+}
+@media screen and (max-width: 500px)/*template site mobile*/{
+  
+  .site {
+    height: 97vh;
+    margin: 0;
+    padding: 2vw;
+    overflow: hidden;
+    display: grid;
+    grid-template-areas:
+      " menu menu"
+      " i0 i0"
+      " footer0  footer2 ";
+    gap: 2rem;
+    justify-items: center;
+    position: relative;
+  }
+  .menu {
+    width: 96%;
+    height: 15vh;
+    grid-area: menu;
+    font-size: 5vw;
+    color: #5b3817;
+    font-family: Palatino, Palatino Linotype, Georgia, Times, Times New Roman,
+      serif;
+    background-color: #fff0da;
+    padding: 2vw;
+    display: grid;
+    grid-template-areas:
+      "logo name"
+      "ausstellungen biographie "
+      "kontakt landschaft"
+      "drop1  drop2";
+    align-items: center;
+    justify-items: left;
+    overflow: visible;
+    gap: 0.7vw 0;
+  }
+  .name {
+    font-size: 8vw;
+  }
+  .copyright {
+    margin-left: 0;
+    margin-right: auto;
+    font-family: Baskerville, Georgia, Cambria, Times, Times New Roman, serif;
+    font-size: 3.3vw;
+    color: #896f58;
+    grid-area: footer0;
+  }
+  .haftungsausschluss {
+    margin-left: auto;
+    margin-right: 0;
+    font-family: Baskerville, Georgia, Cambria, Times, Times New Roman, serif;
+    font-size: 3.3vw;
+    color: #896f58;
+    grid-area: footer2;
+  }
+}
+
+/*General sites not dependant on viewport*/
+.logo {
+  grid-area: logo;
+}
+.name {
+  grid-area: name;
+}
+.dropdown1 {
+  grid-area: drop1;
+}
+.dropdown {
+  grid-area: drop2;
+}
+.landschaft {
+  grid-area: landschaft;
+}
+.ausstellungen {
+  grid-area: ausstellungen;
+}
+.biographie {
+  grid-area: biographie;
+}
+.kontakt {
+  grid-area: kontakt;
+}
+a.haftungsausschluss {
+  color: #896f58;
+}
+a.haftungsausschluss:hover {
+  color: #9b7e65;
+}
+p{
+  color: #5B3817;
+}

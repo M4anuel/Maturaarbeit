@@ -1,0 +1,10 @@
+.publish-btn{
+    width:100%;
+    color: #9e451f;
+    background-color: #fff0da;
+    cursor: pointer;
+}
+.idnr{
+    display:none;
+    position:absolute;
+}

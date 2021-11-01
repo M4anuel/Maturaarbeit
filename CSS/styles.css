@@ -1,0 +1,473 @@
+html {
+  font-size: 100%;
+  background-color: #fffdf5;
+}
+a {
+  text-decoration: none;
+  color: #9e451f;
+  white-space: nowrap;
+}
+a:hover {
+  white-space: nowrap;
+  text-decoration: none;
+  color: #e75e38;
+}
+/*Dropdown menus*/
+.dropbtn {
+  border: none;
+  background-color: #fff0da;
+  color: #9e451f;
+  padding: 0;
+}
+.dropdown,
+.dropdown1 {
+  display: inline-block;
+  position: relative;
+}
+.dropcontent {
+  padding: 0.9vw 1vw;
+  display: none;
+  position: absolute;
+  z-index: 1;
+  background-color: #fff0da;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+.dropdown:hover .dropcontent,
+.dropdown1:hover .dropcontent {
+  display: block;
+}
+/*Dropdown menus end*/
+@media screen and (min-width: 1024px)/*individual sites*/{
+  .mainimgclass {
+    grid-area: i0;
+    justify-content: center;
+  }
+  .mainimg {
+    width: 60vw;
+    grid-area: i0;
+  }
+  .content1{
+    grid-column: 1 / span 2;
+    grid-row: 2; 
+    display:grid;
+    width:fit-content;
+    grid-template-areas:
+    "i1 t0"
+    "t2 i2";
+    justify-items: center;
+    gap: 0 2vw;
+  }
+  .i1{
+    margin-top:1.5vh;
+    width: 35vw;
+  }
+  .content2{
+    grid-template-areas:
+    "i3 t3";
+  }
+  .pferdebilderi0{
+    grid-area: i3;
+  }
+  .pferdebildert0{
+    grid-area:t3;
+  }
+  .content3{
+    grid-template-areas:
+    "landschafti0 landschaftt0 landschafti1"
+    "landschafti0 landschaftt0 landschafti2"
+    "landschafti0 landschaftt0 landschafti3";
+  }
+  .landschafti0{
+    grid-area: landschafti0;
+  }
+  .landschaftt0{
+    grid-area: landschaftt0;
+  }
+  .content4{
+    grid-template-areas:
+    "holzschnittei0 holzschnittet0"
+    "holzschnittei1 holzschnittet0"
+    "holzschnittei2 holzschnittet0";
+  }
+  .holzschnittet0{
+    grid-area: holzschnittet0;
+  }
+  .content5{
+    grid-template-areas:
+    "cembalii0";
+  }
+  .cembalii0{
+    width:100%;
+  }
+  .content6{
+    grid-template-areas:
+    "kopient0"
+    "kopieni0"
+    "kopient1"
+    "kopieni1";
+  }
+  .kopieni0, .kopieni1{
+    width:60vw;
+  }
+  .content7{
+    grid-template-areas:
+    "ausstellungeni0 ausstellungent0 ausstellungent1"
+    "ausstellungent2 ausstellungent2 ausstellungent2";
+  }
+  .ausstellungent2{
+    grid-area: ausstellungent2;
+  }
+  .content8{
+    grid-template-areas:
+    "biographiei0 biographiet0"
+    "biographiei1 biographiei1";
+  }
+  .biographiei0{
+    width:30vw;
+    grid-area:biographiei0;
+  }
+  .biographiet0{
+    grid-area: biographiet0;
+  }
+  .biographiei1{
+    width:100%;
+    grid-area: biographiei1;
+  }
+  .content9{
+    grid-template-areas:
+    "maltechnickeni0 maltechnickent0 maltechnickeni1"
+    "maltechnickeni2 maltechnickent0 maltechnickeni1"
+    "maltechnickeni3 maltechnickent0 maltechnickeni1";
+  }
+  .maltechnickeni0{
+    grid-area: maltechnickeni0;
+  }
+  .maltechnickeni1{
+    grid-area: maltechnickeni1;
+  }
+  .maltechnickeni2{
+    grid-area: maltechnickeni2;
+  }
+  .maltechnickeni3{
+    grid-area: maltechnickeni3;
+  }
+  .maltechnickent0{
+    grid-area: maltechnickent0;
+  }
+  .content10{
+    grid-template-areas:
+    "konditionent0 konditioneni0"
+    "konditioneni1 konditionent1"
+    "konditioneni2 konditioneni2";
+  }/*
+  .konditioneni2{
+    grid-area:konditioneni2;
+    height: 5vh;
+  }
+  */
+}
+.content12{
+  grid-template-areas: 
+  "lipizzaneri0 lipizzanert0"
+  "lipizzaneri1 lipizzaneri1";
+}
+.lipizzaneri1{
+  grid-area: lipizzaneri1;
+}
+
+@media screen and (min-width: 1024px)/*template site desktop*/{
+  .site{
+    width: 70vw;
+    margin: 3rem auto;
+    border: 1px solid #7f7f7f;
+    border-radius: 4px;
+    padding: 20px;
+    overflow: auto;
+    display: grid;
+    grid-template-areas:
+      " menu menu"
+      " i0 i0"
+      " footer0  footer2 ";
+    gap: 2rem;
+    justify-items: center;
+    position: relative;
+  }
+  .menu {
+    width: 97%;
+    grid-area: menu;
+    font-size: 1.4vw;
+    color: #5b3817;
+    font-family: Palatino, Palatino Linotype, Georgia, Times, Times New Roman,
+      serif;
+    background-color: #fff0da;
+    padding: 0.5vw 1vw 0.5vw 0.5vw;
+    display: grid;
+    grid-template-columns: 10px repeat(5);
+    grid-template-rows: repeat(2);
+    grid-template-areas:
+      "logo name . . . . ."
+      "logo drop1 landschaft drop2  ausstellungen biographie kontakt";
+    justify-items: left;
+    align-items: center;
+    gap: 0 2rem;
+    overflow: visible;
+  }
+  .logo {
+    height: 4vw;
+  }
+  .name {
+    font-size: 1.8vw;
+  }
+  .copyright {
+    margin-left: 0;
+    margin-right: auto;
+    font-family: Baskerville, Georgia, Cambria, Times, Times New Roman, serif;
+    font-size: 1.2vw;
+    color: #896f58;
+    grid-area: footer0;
+  }
+  .haftungsausschluss {
+    margin-left: auto;
+    margin-right: 0;
+    font-family: Baskerville, Georgia, Cambria, Times, Times New Roman, serif;
+    font-size: 1.2vw;
+    color: #896f58;
+    grid-area: footer2;
+  }
+}
+@media screen and (max-width: 1024px)/*individual sites*/{
+  .mainimgclass {
+    grid-area: i0;
+    justify-content: center;
+  }
+  .mainimg {
+    width: 100%;
+  }
+  .content1{
+    grid-area: i0;
+    display:grid;
+    width:fit-content;
+    grid-template-areas:
+    "i1 "
+    "t0"
+    "t2 "
+    "i2";
+    justify-items: center;
+    gap: 0 2vw;
+    overflow: auto;
+  }
+  .content7{
+    grid-template-areas:
+    "ausstellungeni0 ausstellungent0 "
+    "ausstellungent1 ausstellungent1"
+    "ausstellungent2 ausstellungent2";
+  }
+  .content8{
+    grid-template-areas:
+    "biographiei0"
+    "biographiet0"
+    "biographiei1";
+  }
+  .content9{
+    grid-template-areas:
+    "maltechnickent0 maltechnickeni1"
+    "maltechnickeni0 maltechnickeni1"
+    "maltechnickeni2 maltechnickeni1"
+    "maltechnickeni3 maltechnickeni1";
+  }
+}
+@media screen and (max-width: 1024px)/*template site tablet*/{
+  .site {
+    margin: 0;
+    height: 95vh;
+    padding: 2vw;
+    border: 0;
+    overflow: hidden;
+    display: grid;
+    grid-template-areas:
+      " menu menu"
+      " i0 i0"
+      " footer0  footer2 ";
+    gap: 2rem;
+    justify-items: center;
+    position: relative;
+  }
+  
+  .menu {
+    z-index: 99999999;
+    width: 96%;
+    height: 23vh;
+    min-height: 30vw;
+    grid-area: menu;
+    font-size: 5vw;
+    color: #5b3817;
+    font-family: Palatino, Palatino Linotype, Georgia, Times, Times New Roman,
+      serif;
+    background-color: #fff0da;
+    padding: 2vw;
+    display: grid;
+    grid-template-areas:
+      "logo name"
+      "ausstellungen biographie "
+      "kontakt landschaft"
+      "drop1  drop2";
+    align-items: center;
+    justify-items: left;
+    overflow: visible;
+    gap: 0.7vw 0;
+  }
+  .logo {
+    grid-area: logo;
+    height: 12vw;
+    margin-right: 5vw;
+    justify-self: right;
+  }
+  .name {
+    font-size: 9vw;
+  }
+  .copyright {
+    margin-left: 0;
+    margin-right: auto;
+    font-family: Baskerville, Georgia, Cambria, Times, Times New Roman, serif;
+    font-size: 3.3vw;
+    color: #896f58;
+    grid-area: footer0;
+    align-self: flex-end;
+  }
+  .haftungsausschluss {
+    margin-left: auto;
+    margin-right: 0;
+    font-family: Baskerville, Georgia, Cambria, Times, Times New Roman, serif;
+    font-size: 3.3vw;
+    color: #896f58;
+    grid-area: footer2;
+    align-self: flex-end;
+  }
+}
+@media screen and (max-width: 500px)/*individual sites*/{
+  img{
+    width: 90%;
+  };
+  .mainimgclass {
+    grid-area: i0;
+    justify-content: center;
+  }
+  .mainimg {
+    width: 100%;
+  }
+  .content1{
+    grid-template-areas:
+    "i1"
+    "t0"
+    "t2"
+    "i2";
+  }
+  .content2{
+    grid-template-areas:
+    "i3"
+    "t3";
+  }
+  
+}
+@media screen and (max-width: 500px)/*template site mobile*/{ 
+  .site {
+    margin: 0;
+    padding: 2vw;
+    overflow: hidden;
+    display: grid;
+    grid-template-areas:
+      " menu"
+      " i0"
+      " footer0 "
+      " footer2 ";
+    gap: 0;
+    justify-items: center;
+    position: relative;
+  }
+  .menu {
+    width: 96%;
+    height: 15vh;
+    grid-area: menu;
+    font-size: 5vw;
+    color: #5b3817;
+    font-family: Palatino, Palatino Linotype, Georgia, Times, Times New Roman,
+      serif;
+    background-color: #fff0da;
+    padding: 2vw;
+    display: grid;
+    grid-template-areas:
+      "logo name"
+      "ausstellungen biographie "
+      "kontakt landschaft"
+      "drop1  drop2";
+    align-items: center;
+    justify-items: left;
+    overflow: visible;
+    gap: 0.7vw 0;
+  }
+  .name {
+    font-size: 8vw;
+  }
+  .copyright {
+    margin-left: 0;
+    margin-right: auto;
+    font-family: Baskerville, Georgia, Cambria, Times, Times New Roman, serif;
+    font-size: 3.3vw;
+    color: #896f58;
+    grid-area: footer0;
+  }
+  .haftungsausschluss {
+    margin-left: auto;
+    margin-right: 0;
+    font-family: Baskerville, Georgia, Cambria, Times, Times New Roman, serif;
+    font-size: 3.3vw;
+    color: #896f58;
+    grid-area: footer2;
+  }
+}
+
+/*General sites not dependant on viewport*/
+.logo {
+  grid-area: logo;
+}
+.name {
+  grid-area: name;
+}
+.dropdown1 {
+  grid-area: drop1;
+}
+.dropdown {
+  grid-area: drop2;
+}
+.landschaft {
+  grid-area: landschaft;
+}
+.ausstellungen {
+  grid-area: ausstellungen;
+}
+.biographie {
+  grid-area: biographie;
+}
+.kontakt {
+  grid-area: kontakt;
+}
+a.haftungsausschluss {
+  color: #896f58;
+}
+a.haftungsausschluss:hover {
+  color: #9b7e65;
+}
+p{
+  color: #5B3817;
+}
+.cc{
+  padding: 0 10px;
+  grid-area: i0;
+  display: grid;
+  justify-items: center;
+  gap: 0 2vw;
+  overflow:auto;
+}
+h1, h2, h3, h4, h5, h6 {
+  color:#bb5224
+}
