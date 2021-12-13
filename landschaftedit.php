@@ -1,4 +1,12 @@
 <?php 
+if($_SERVER['REQUEST_METHOD'] === 'POST'){}
+else{
+  require_once('config/db_connect_admin.php');
+  $sql="  UPDATE lastwebsite SET link = ('http://localhost/workspace1/landschaftedit.php') WHERE id = 1;";
+  mysqli_query($con, $sql);
+  header('Location: http://localhost/workspace1/_login.php');
+        exit();
+}
 require_once('config/db_connect.php');
 $sql = "SELECT inhalt FROM content WHERE idnr=4;";
 $landschaft = mysqli_query($con, $sql);
@@ -91,7 +99,7 @@ $landschaft = mysqli_query($con, $sql);
     </script>
     <script type="text/javascript">
         CKEDITOR.config.height='50vh';
-        CKEDITOR.config.width='40vw';
+        CKEDITOR.config.width='37vw';
     </script>
   </body>
 </html>

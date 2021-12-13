@@ -1,4 +1,12 @@
 <?php 
+if($_SERVER['REQUEST_METHOD'] === 'POST'){}
+else{
+  require_once('config/db_connect_admin.php');
+  $sql="  UPDATE lastwebsite SET link = ('http://localhost/workspace1/kontaktedit.php') WHERE id = 1;";
+  mysqli_query($con, $sql);
+  header('Location: http://localhost/workspace1/_login.php');
+        exit();
+}
 require_once('config/db_connect.php');
 $sql = "SELECT inhalt FROM content WHERE idnr=14;";
 $kontakt = mysqli_query($con, $sql);

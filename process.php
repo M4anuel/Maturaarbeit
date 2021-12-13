@@ -1,4 +1,3 @@
-
 <?php
 if($_SERVER['REQUEST_METHOD'] === 'POST'){
     require_once('config/db_connect_admin.php');
@@ -28,3 +27,4 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
         exit();
 }
 ?>
+

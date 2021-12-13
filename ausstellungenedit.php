@@ -1,4 +1,12 @@
 <?php 
+if($_SERVER['REQUEST_METHOD'] === 'POST'){}
+else{
+  require_once('config/db_connect_admin.php');
+  $sql="  UPDATE lastwebsite SET link = ('http://localhost/workspace1/ausstellungenedit.php') WHERE id = 1;";
+  mysqli_query($con, $sql);
+  header('Location: http://localhost/workspace1/_login.php');
+        exit();
+}
 require_once('config/db_connect.php');
 $sql = "SELECT inhalt FROM content WHERE idnr=10;";
 $ausstellungen = mysqli_query($con, $sql);
@@ -81,18 +89,12 @@ $verkäufe = mysqli_query($con, $sql);
             </form>
           </div>
           <div class="ausstellungent1">
-          <form action="process.php" method="POST">
-           <input type="hidden" name="idnr" value="11" class="editnr">
-                <textarea class="editbox" style="height: 400px;" name="content" id="Article_editor">
                     <?php
                     echo implode(mysqli_fetch_assoc($zitat));
                     ?>
-                </textarea>
-                <input type="submit" class="publish-btn" name="submit_data" value="publish">
-            </form>
           </div>
           <div class="ausstellungent2">
-          <form action="process.php" method="POST">
+          <form class="form" action="process.php" method="POST">
            <input type="hidden" name="idnr" value="12" class="editnr">
                 <textarea class="editbox" style="height: 400px;" name="content" id="Article_editor2">
                     <?php
@@ -117,7 +119,7 @@ $verkäufe = mysqli_query($con, $sql);
       CKEDITOR.replace('Article_editor2');
     </script>
     <script type="text/javascript">
-        CKEDITOR.config.height='50vh';
+        CKEDITOR.config.height='190vh';
         CKEDITOR.config.width='40vw';
     </script>
   </body>
