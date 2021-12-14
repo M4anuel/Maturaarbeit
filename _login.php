@@ -51,7 +51,7 @@ button {
 </style>   
 </head>    
 <body>    
-    <center> <h1> Einlogen um zu editieren </h1> </center>   
+    <center> <h1> Einloggen um zu editieren </h1> </center>   
     <form action="_processlogin.php" method="POST">  
         <div class="container">   
             <label>Username : </label>   
