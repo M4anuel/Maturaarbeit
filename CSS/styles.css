@@ -205,8 +205,8 @@ a:hover {
     grid-template-columns: 10px repeat(5);
     grid-template-rows: repeat(2);
     grid-template-areas:
-      "logo name . . . . ."
-      "logo drop1 landschaft drop2  ausstellungen biographie kontakt";
+      "logo name . . . . . ."
+      "logo drop1 landschaft drop2  ausstellungen biographie kontakt shop";
     justify-items: left;
     align-items: center;
     gap: 0 2rem;
@@ -296,7 +296,7 @@ a:hover {
   .menu {
     z-index: 99999999;
     width: 96%;
-    height: 23vh;
+    height: fit-content;
     min-height: 30vw;
     grid-area: menu;
     font-size: 5vw;
@@ -310,6 +310,7 @@ a:hover {
       "logo name"
       "ausstellungen biographie "
       "kontakt landschaft"
+      "shop ."
       "drop1  drop2";
     align-items: center;
     justify-items: left;
@@ -386,7 +387,7 @@ a:hover {
   }
   .menu {
     width: 96%;
-    height: 15vh;
+    height: fit-content;
     grid-area: menu;
     font-size: 5vw;
     color: #5b3817;
@@ -399,6 +400,7 @@ a:hover {
       "logo name"
       "ausstellungen biographie "
       "kontakt landschaft"
+      "shop ."
       "drop1  drop2";
     align-items: center;
     justify-items: left;
@@ -450,6 +452,9 @@ a:hover {
 }
 .kontakt {
   grid-area: kontakt;
+}
+.shop{
+  grid-area: shop;
 }
 a.haftungsausschluss {
   color: #896f58;
