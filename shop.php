@@ -1,12 +1,3 @@
-<?php 
-require_once('config/db_connect.php');
-$sql = "SELECT beschreibung FROM shop WHERE id=1;";
-$shopbeschreibung = mysqli_query($con, $sql);
-$sql = "SELECT beschreibung FROM shop WHERE id=2;";
-$item1beschreibung = mysqli_query($con, $sql);
-$sql = "SELECT filename FROM shop WHERE id=2;";
-$item1filename = mysqli_query($con, $sql);
-?>
 <!DOCTYPE html>
 <html lang="de">
   <head>
@@ -15,7 +6,7 @@ $item1filename = mysqli_query($con, $sql);
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="images/favicon.ico" />
     <title>
-      Ausstellungen
+      Shop
     </title>
     <link rel="stylesheet" href="CSS/normalize.css" />
     <link rel="stylesheet" href="CSS/styles.css" />
@@ -31,15 +22,124 @@ $item1filename = mysqli_query($con, $sql);
       ?>
       </div>
 
-      <div class="cc shop" styles= "grid-area: i0; height: 100;">
+      <div class="shop1 cc" styles= "grid-area: i0; height: 100;">
           <div class="infobox">
               <?php
+              require_once('config/db_connect.php');
+              $sql = "SELECT beschreibung FROM shop WHERE id=1;";
+              $shopbeschreibung = mysqli_query($con, $sql);
                  echo implode(mysqli_fetch_assoc($shopbeschreibung));
                 ?>
           </div>
-          <div class="shopitem item1">
-              <div class="shopimg"><img class="shopimg"src="images/<?php echo implode(mysqli_fetch_assoc($item1filename)); ?>" alt=""></div>
-              <div class="shoptext"><?php echo implode(mysqli_fetch_assoc($item1beschreibung)); ?></div>
+          <div class="shopitem item">
+             <?php 
+               require_once('config/db_connect.php');
+               $sql = "SELECT beschreibung FROM shop WHERE id=2;";
+               $itembeschreibung = mysqli_query($con, $sql);
+               $sql = "SELECT filename FROM shop WHERE id=2;";
+               $itemfilename = mysqli_query($con, $sql);
+              ?>
+              <div class="shopimg"><img class="shopimg"src="images/<?php echo implode(mysqli_fetch_assoc($itemfilename)); ?>" alt=""></div>
+              <div class="shoptext"><?php echo implode(mysqli_fetch_assoc($itembeschreibung)); ?></div>
+          </div>
+          <div class="shopitem item">
+             <?php 
+               require_once('config/db_connect.php');
+               $sql = "SELECT beschreibung FROM shop WHERE id=3;";
+               $itembeschreibung = mysqli_query($con, $sql);
+               $sql = "SELECT filename FROM shop WHERE id=3;";
+               $itemfilename = mysqli_query($con, $sql);
+              ?>
+              <div class="shopimg"><img class="shopimg"src="images/<?php echo implode(mysqli_fetch_assoc($itemfilename)); ?>" alt=""></div>
+              <div class="shoptext"><?php echo implode(mysqli_fetch_assoc($itembeschreibung)); ?></div>
+          </div>
+          <div class="shopitem item">
+             <?php 
+               require_once('config/db_connect.php');
+               $sql = "SELECT beschreibung FROM shop WHERE id=4;";
+               $itembeschreibung = mysqli_query($con, $sql);
+               $sql = "SELECT filename FROM shop WHERE id=4;";
+               $itemfilename = mysqli_query($con, $sql);
+              ?>
+              <div class="shopimg"><img class="shopimg"src="images/<?php echo implode(mysqli_fetch_assoc($itemfilename)); ?>" alt=""></div>
+              <div class="shoptext"><?php echo implode(mysqli_fetch_assoc($itembeschreibung)); ?></div>
+          </div>
+          <div class="shopitem item">
+             <?php 
+               require_once('config/db_connect.php');
+               $sql = "SELECT beschreibung FROM shop WHERE id=5;";
+               $itembeschreibung = mysqli_query($con, $sql);
+               $sql = "SELECT filename FROM shop WHERE id=5;";
+               $itemfilename = mysqli_query($con, $sql);
+              ?>
+              <div class="shopimg"><img class="shopimg"src="images/<?php echo implode(mysqli_fetch_assoc($itemfilename)); ?>" alt=""></div>
+              <div class="shoptext"><?php echo implode(mysqli_fetch_assoc($itembeschreibung)); ?></div>
+          </div>
+          <div class="shopitem item">
+             <?php 
+               require_once('config/db_connect.php');
+               $sql = "SELECT beschreibung FROM shop WHERE id=6;";
+               $itembeschreibung = mysqli_query($con, $sql);
+               $sql = "SELECT filename FROM shop WHERE id=6;";
+               $itemfilename = mysqli_query($con, $sql);
+              ?>
+              <div class="shopimg"><img class="shopimg"src="images/<?php echo implode(mysqli_fetch_assoc($itemfilename)); ?>" alt=""></div>
+              <div class="shoptext"><?php echo implode(mysqli_fetch_assoc($itembeschreibung)); ?></div>
+          </div>
+          <div class="shopitem item">
+             <?php 
+               require_once('config/db_connect.php');
+               $sql = "SELECT beschreibung FROM shop WHERE id=7;";
+               $itembeschreibung = mysqli_query($con, $sql);
+               $sql = "SELECT filename FROM shop WHERE id=7;";
+               $itemfilename = mysqli_query($con, $sql);
+              ?>
+              <div class="shopimg"><img class="shopimg"src="images/<?php echo implode(mysqli_fetch_assoc($itemfilename)); ?>" alt=""></div>
+              <div class="shoptext"><?php echo implode(mysqli_fetch_assoc($itembeschreibung)); ?></div>
+          </div>
+          <div class="shopitem item">
+             <?php 
+               require_once('config/db_connect.php');
+               $sql = "SELECT beschreibung FROM shop WHERE id=8;";
+               $itembeschreibung = mysqli_query($con, $sql);
+               $sql = "SELECT filename FROM shop WHERE id=8;";
+               $itemfilename = mysqli_query($con, $sql);
+              ?>
+              <div class="shopimg"><img class="shopimg"src="images/<?php echo implode(mysqli_fetch_assoc($itemfilename)); ?>" alt=""></div>
+              <div class="shoptext"><?php echo implode(mysqli_fetch_assoc($itembeschreibung)); ?></div>
+          </div>
+          <div class="shopitem item">
+             <?php 
+               require_once('config/db_connect.php');
+               $sql = "SELECT beschreibung FROM shop WHERE id=9;";
+               $itembeschreibung = mysqli_query($con, $sql);
+               $sql = "SELECT filename FROM shop WHERE id=9;";
+               $itemfilename = mysqli_query($con, $sql);
+              ?>
+              <div class="shopimg"><img class="shopimg"src="images/<?php echo implode(mysqli_fetch_assoc($itemfilename)); ?>" alt=""></div>
+              <div class="shoptext"><?php echo implode(mysqli_fetch_assoc($itembeschreibung)); ?></div>
+          </div>
+          <div class="shopitem item">
+             <?php 
+               require_once('config/db_connect.php');
+               $sql = "SELECT beschreibung FROM shop WHERE id=10;";
+               $itembeschreibung = mysqli_query($con, $sql);
+               $sql = "SELECT filename FROM shop WHERE id=10;";
+               $itemfilename = mysqli_query($con, $sql);
+              ?>
+              <div class="shopimg"><img class="shopimg"src="images/<?php echo implode(mysqli_fetch_assoc($itemfilename)); ?>" alt=""></div>
+              <div class="shoptext"><?php echo implode(mysqli_fetch_assoc($itembeschreibung)); ?></div>
+          </div>
+          <div class="shopitem item">
+             <?php 
+               require_once('config/db_connect.php');
+               $sql = "SELECT beschreibung FROM shop WHERE id=11;";
+               $itembeschreibung = mysqli_query($con, $sql);
+               $sql = "SELECT filename FROM shop WHERE id=11;";
+               $itemfilename = mysqli_query($con, $sql);
+              ?>
+              <div class="shopimg"><img class="shopimg"src="images/<?php echo implode(mysqli_fetch_assoc($itemfilename)); ?>" alt=""></div>
+              <div class="shoptext"><?php echo implode(mysqli_fetch_assoc($itembeschreibung)); ?></div>
           </div>
       </div>
       <?php

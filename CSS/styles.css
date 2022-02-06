@@ -473,19 +473,26 @@ a:hover {
   }
 }
 /*shop propertes*/
-.shop{
+.cc.shop1{
   display:grid;
-  grid-template-areas:
-  "";
+  gap: 20px 2vw;
+  justify-items: left;
+  overflow:hidden;
 }
 .shopitem{
   display:flex;
   flex-direction: row;
-  max-height: 20vh;
-  gap: 20px;
+  gap: 0 10px;
 }
 .shopimg{
   max-height: 20vh;
+}
+.shopform{
+  display:inline-block;
+}
+.shoptext{
+  padding-top:5px;
+  color: #5B3817;
 }
 
 
