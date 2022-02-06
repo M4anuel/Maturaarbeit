@@ -93,11 +93,49 @@ a:hover {
     grid-area: holzschnittet0;
   }
   .content5{
+    
+    padding: 0 10px;
+    grid-area: i0;
+    display: grid;
+    justify-items: center;
+    align-items: baseline;
+    gap:2vw;
+    overflow: auto;
     grid-template-areas:
-    "cembalii0";
+    "cembalit0 cembalit1"
+    "cembalii0 cembalii1"
+    "cembalii2 cembalii3"
+    "cembalii5 cembalii5";
+  }
+  .cembaliimg{
+    width: auto;
+    height: auto;
+    max-width: 30vw;
+    max-height: 60vh;
+  }
+  .cembalit0{
+    grid-area: cembalit0;
   }
   .cembalii0{
-    width:100%;
+    grid-area: cembalii0;
+  }
+  .cembalii1{
+    grid-area: cembalii1;
+  }
+  .cembalii2{
+    grid-area: cembalii2;
+  }
+  .cembalii3{
+    grid-area: cembalii3;
+  }
+  .cembalii4{
+    grid-area: cembalii4;
+  }
+  .cembalii5{
+    grid-area: cembalii5;
+  }
+  .cembalii6{
+    grid-area: cembalii6;
   }
   .content6{
     grid-template-areas:
@@ -165,16 +203,15 @@ a:hover {
     height: 5vh;
   }
   */
+  .content12{
+    grid-template-areas: 
+    "lipizzaneri0 lipizzanert0"
+    "lipizzaneri1 lipizzaneri1";
+  }
+  .lipizzaneri1{
+    grid-area: lipizzaneri1;
+  }
 }
-.content12{
-  grid-template-areas: 
-  "lipizzaneri0 lipizzanert0"
-  "lipizzaneri1 lipizzaneri1";
-}
-.lipizzaneri1{
-  grid-area: lipizzaneri1;
-}
-
 @media screen and (min-width: 1024px)/*template site desktop*/{
   .site{
     width: 70vw;
@@ -256,6 +293,14 @@ a:hover {
     gap: 0 2vw;
     overflow: auto;
   }
+  .content5{
+    grid-template-areas:
+    "cembalit0" "cembalit1"
+    "cembalii0" "cembalii1"
+    "cembalii2" "cembalii3"
+    "cembalii5" "cembalii5";
+    overflow:scroll;
+  }
   .content7{
     grid-template-areas:
     "ausstellungeni0 ausstellungent0 "
@@ -318,8 +363,8 @@ a:hover {
     gap: 0.7vw 0;
   }
   .logo {
-    grid-area: logo;
     height: 12vw;
+    width:auto;
     margin-right: 5vw;
     justify-self: right;
   }
@@ -427,6 +472,22 @@ a:hover {
     grid-area: footer2;
   }
 }
+/*shop propertes*/
+.shop{
+  display:grid;
+  grid-template-areas:
+  "";
+}
+.shopitem{
+  display:flex;
+  flex-direction: row;
+  max-height: 20vh;
+  gap: 20px;
+}
+.shopimg{
+  max-height: 20vh;
+}
+
 
 /*General sites not dependant on viewport*/
 .logo {
