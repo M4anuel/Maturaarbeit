@@ -39,11 +39,11 @@ $landschaft = mysqli_query($con, $sql);
           <a href="allmedingen.php"><img class="landschafti2" src="images/abend an der aare121x90.jpg" alt=""></a>
           <a href="zeichnungen.php"><img class="landschafti3" src="images/ochsen hinter bürglen122x91.jpg" alt=""></a>
       </div>
-      <div class="copyright">© 2012 Eva Jaeckle - Alle Rechte vorbehalten</div>
-      <div class="haftungsausschluss">
-        <a class="haftungsausschluss" href="haftungsausschluss.php"
-          >haftungsausschluss</a>
-      </div>
+      <?php
+      $sql = "SELECT menucode FROM menu WHERE versionid=5;";
+      $bottommenu = mysqli_query($con, $sql);
+      echo implode(mysqli_fetch_assoc($bottommenu));
+      ?>
     </div>
   </body>
 </html>

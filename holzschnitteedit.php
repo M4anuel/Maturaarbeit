@@ -53,11 +53,11 @@ $holzschnitte = mysqli_query($con, $sql);
           <img class="holzschnittei1" src="images/img118.jpg" alt="">
           <img class="holzschnittei2" src="images/dsc00029_2.jpg" alt="">
       </div>
-      <div class="copyright">© 2012 Eva Jaeckle - Alle Rechte vorbehalten</div>
-      <div class="haftungsausschluss">
-        <a class="haftungsausschluss" href="haftungsausschluss.php"
-          >haftungsausschluss</a>
-      </div>
+      <<?php
+      $sql = "SELECT menucode FROM menu WHERE versionid=5;";
+      $bottommenu = mysqli_query($con, $sql);
+      echo implode(mysqli_fetch_assoc($bottommenu));
+      ?>
     </div>
     <script src="ckeditor/ckeditor.js"></script>
     <script>

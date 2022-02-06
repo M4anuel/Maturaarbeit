@@ -43,11 +43,11 @@ $kopien1 = mysqli_query($con, $sql)
           </div>
       <img class="kopieni1" src="images/blauen pferde.jpg" alt="">
       </div>
-      <div class="copyright">© 2012 Eva Jaeckle - Alle Rechte vorbehalten</div>
-      <div class="haftungsausschluss">
-        <a class="haftungsausschluss" href="haftungsausschluss.php"
-          >haftungsausschluss</a>
-      </div>
+      <?php
+      $sql = "SELECT menucode FROM menu WHERE versionid=5;";
+      $bottommenu = mysqli_query($con, $sql);
+      echo implode(mysqli_fetch_assoc($bottommenu));
+      ?>
     </div>
   </body>
 </html>

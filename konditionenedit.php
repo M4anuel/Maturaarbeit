@@ -65,19 +65,13 @@ $konditionenr = mysqli_query($con, $sql);
                 </textarea>
                 <input type="submit" class="publish-btn" name="submit_data" value="publish">
             </form>
-          </div>
-          <!---
-          <div class="konditioneni2">
-            <img src="images/konditionen.jpg" alt="">
-          </div>
-          --->
-        
+          </div>        
       </div>
-      <div class="copyright">© 2012 Eva Jaeckle - Alle Rechte vorbehalten</div>
-      <div class="haftungsausschluss">
-        <a class="haftungsausschluss" href="haftungsausschluss.php"
-          >haftungsausschluss</a>
-      </div>
+      <?php
+      $sql = "SELECT menucode FROM menu WHERE versionid=5;";
+      $bottommenu = mysqli_query($con, $sql);
+      echo implode(mysqli_fetch_assoc($bottommenu));
+      ?>
     </div>
   </body>
   <script src="ckeditor/ckeditor.js"></script>
